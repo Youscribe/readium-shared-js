@@ -11896,6 +11896,9 @@ var FontLoaderFallback = function(document, options) {
                 processCssRules(cssRules);
             }
         });
+
+        if (styleSheets.length <= 0)
+          returnUsedFonts();
     };
 
     return function(callback) {
